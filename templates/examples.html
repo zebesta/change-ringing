@@ -1,1 +1,33 @@
-Examples!
+{% extends "index.html" %}
+
+{% block content %}
+
+<h1>Examples!</h1>
+{% for example in examples %}
+    <li class="list-group-item">
+      <h2>Originals</h2>
+      <img src="{{ example.origSpectroLink }}" height=100 width=100>
+      <audio controls>
+        <source src="{{ example.origAudioLink }}" type="audio/wav">
+        Your browser does not support the audio tag.
+      </audio>
+
+      <h2>Dreams</h2>
+      <img src="{{ example.dreamedSpectroLink }}" height=100 width=100>
+      <audio controls>
+        <source src="{{ example.dreamedAudioLink }}" type="audio/wav">
+        Your browser does not support the audio tag.
+      </audio>
+
+    </li>
+  {% else %}
+    <div class="alert alert-info" role="alert">
+      <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+      <strong>Ahh</strong> Nothin here!
+    </div>
+  {% endfor %}
+
+
+
+
+{% endblock %}
