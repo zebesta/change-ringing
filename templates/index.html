@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Change Ringing</title>
+
+        <!-- CSS -->
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+
+        <!-- jQuery -->
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+        <style>
+        /*make space for navbar above body*/
+        body { padding-top: 50px; }
+
+        /*customize navbar*/
+        .navbar {
+            margin-bottom: 0;
+            background-color: #1CCC7D;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 1px;
+            border-radius: 1px;
+            font-family: Arial, sans-serif;
+        }
+        .navbar li a, .navbar .navbar-brand {
+            color: #000000 !important;
+        }
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #FFFFFF !important;
+            background-color: #117F4E !important;
+        }
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #000000 !important;
+        }
+        .block-content {
+          padding-top: 2em;
+        }
+        </style>
+    </head>
+
+    <body>
+      <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ url_for('home') }}">Change Ringing</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/zebesta/change-ringing">THIS SITE</a></li>
+            <li><a href="{{ url_for('examples') }}">EXAMPLES</a> <span class="sr-only">(current)</span></a></li>
+            <li><a href="{{ url_for('home') }}">HOME</a> <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }} fade in">
+            {{ message }}
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <div class="container block-content">
+            {% block content %}{% endblock %}
+        </div>
+
+    </body>
+
+</html>
