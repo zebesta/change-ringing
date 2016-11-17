@@ -1,0 +1,63 @@
+Plain Hunt Minimus
+xh
+4
+Plain Hunt Doubles
+xh
+5
+Plain Hunt Minor
+xh
+6
+Plain Hunt Triples
+xh
+7
+Plain Hunt Major
+xh
+8
+Plain Hunt Maximus
+xh
+12
+Plain Bob Doubles
+xhxhx l2
+5
+Plain Bob Minor
+xhxhxh l2
+6
+Plain Bob Triples
+xhxhxhx l2
+7
+Plain Bob Major
+xhxhxhxh l2
+8
+Grandsire Doubles
+3hxhxhxhxh
+5
+Grandsire Triples
+3hxhxhxhxhxhxh
+7
+Kent Minor
+34x34hx2xhx2xh lh
+6
+Kent Major
+34x34hx2xhx2xhx2xh lh
+8
+Oxford Minor
+x34xhx2xhx2xh lh
+6
+Double Court Bob Minor
+x4x3xh lh
+6
+Double Norwich Bob Major
+x4x36x5xh lh
+8
+Stedman Doubles
+3hx3h3h3xh3h
+5
+Stedman Triples
+3hx3h3h3xh3h
+7
+Cambridge Surprise Minor
+x3x4x2x3x4x5l2
+6
+Bristol Surprise Maximus
+x5Tx14.5Tx5T.36.14x7T.58.16x9T.70.18x18.9Tx18x1T lh
+12

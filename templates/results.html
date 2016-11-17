@@ -3,22 +3,23 @@
 {% block content %}
 
 <h1>Results!</h1>
-{% for example in examples %}
-    <li class="list-group-item">
+{% if example %}
+  <li class="list-group-item">
       <h2>Change ringing!</h2>
-      <img src="{{ example.image }}" height=100 width=100>
       <audio controls>
         <source src="{{ example.audio }}" type="audio/wav">
         Your browser does not support the audio tag.
       </audio>
-
+      <br>
+      <img src="{{ example.image }}">
     </li>
+
   {% else %}
     <div class="alert alert-info" role="alert">
       <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
       <strong>Ahh</strong> Nothin here!
     </div>
-  {% endfor %}
+  {% endif %}
 
 
 
