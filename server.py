@@ -11,6 +11,7 @@ def home():
     songs = ["No Diggity", "Hypnotize", "99 Problems", "Party in the USA"]
     return render_template('form.html', songs=songs)
 
+# accepts the post request from the website
 @app.route("/accept", methods=['POST', 'GET'])
 def accept():
     if request.method == 'POST':
