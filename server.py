@@ -30,11 +30,11 @@ def accept():
         # imageMaker(formattedString)
         print("Building example")
         example = Example('audio/out.wav', 'images/out.jpg')
+
         formattedString = notationReader(place, stage)
         methodPlayer(formattedString)
         methodDrawer(formattedString)
-        return render_template('results.html', example=example)
-        return "You submitted the form!!! With place: " + place + " and stage: " + stage
+        return render_template('results.html', example=example, formattedString=formattedString)
     if request.method == 'GET':
         return "A get request to accept?!?"
 
