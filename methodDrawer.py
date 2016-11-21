@@ -45,7 +45,7 @@ def methodDrawer(printout):
                       fill='silver')
         prevChange = curChange[0]
 
-    im.save("images/out.jpg")
+    im.save("images/%s.jpg" % (printout))
     f.close()
 
 if __name__ == "__main__":

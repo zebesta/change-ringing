@@ -1,4 +1,4 @@
-#!/usr/bin/python
+# I'm a comment!!!
 
 import sys
 import re
@@ -20,7 +20,7 @@ def strChange(arrChange):
 
 
 def pNoteExpander(pNote):
-    pNote = pNote.split()
+    pNote = pNote.split("_")
     lead = pNote[0].split(".")
     if len(pNote) > 1:
         leadEnd = pNote[1][1:]
@@ -63,6 +63,7 @@ def pnRegularizer(pNote, stage):
     else:
         stage = str(stage)
 
+    pNote = pNote.replace(" ", "_")
     pNote = pNote.replace("e", "E")
     pNote = pNote.replace("t", "T")
     pNote = pNote.replace("h", "1.")
@@ -82,7 +83,7 @@ def pnRegularizer(pNote, stage):
     pNote = re.sub(r'^([24680T])', r'1\g<1>', pNote)
     # print(pNote)
 
-    pNote = re.sub(r'\.*(?=[\s\b]|$)', "", pNote)
+    pNote = re.sub(r'\.*(?=[\s_\b]|$)', "", pNote)
     # print(pNote)
 
     return pNote
@@ -92,7 +93,7 @@ def methodPrinter(pNote, stage):
     stageN = getStage(stage)
     lead = pNoteExpander(pNote)
 
-    f = open("text/%s %s.txt" % (pNote, stage), "w")
+    f = open("text/%s_%s.txt" % (pNote, stage), "w")
     f.write(str(stageN)+"\n")
 
     rounds = list(range(1, stageN+1))
@@ -122,7 +123,7 @@ def notationReader(pNote, stage):
     pNote = pnRegularizer(pNote, stage)
     # print(pNote)
     methodPrinter(pNote, stage)
-    return "%s %s" % (pNote, stage)
+    return "%s_%s" % (pNote, stage)
 
 if __name__ == "__main__":
     print(notationReader(str(sys.argv[1]), str(sys.argv[2])))
