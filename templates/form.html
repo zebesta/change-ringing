@@ -24,8 +24,24 @@
 <div class="container" padding-top="10em">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3" id="formcontent">
+      <h3>
+        Place Notation Reader
+      </h3>
+      <p>
+        Select a method from from the drop down list, or enter the place notation 
+        and stage (number of bells) in the boxes below.
+      </p>
+      <p>
+        Methods with an indicated lead end are assumed to be symmetric around the 
+        half lead. Some variation in the place notation is allowed. For example, 
+        <b>xhx4 l2</b> is equivalent for minor to <b>x.16.x.14_l12</b> or 
+        <b>xhx4xhx2</b>.
+      </p>
+      <p>
+        Press submit to view a blue line diagram and listen to the method.
+      </p>
       <!-- <form class="form-group" enctype="multipart/form-data" action="https://change-ringing.herokuapp.com/accept" method=post> -->
-      <form class="form-group" enctype="multipart/form-data" action="https://change-ringing.herokuapp.com/accept" method=post>
+      <form class="form-group" enctype="multipart/form-data" action="http://0.0.0.0:5000/accept" method=post>
         <!-- default song selection if no string typed in -->
         <label for="layer">Methods</label>
         <select type="text" class="form-control" name="method" id=method onchange="selectedS()">
@@ -34,13 +50,13 @@
            {% endfor %}
          </select><br>
         <!-- change input from user -->
-        <label for="place">Place</label><br>
+        <label for="place">Place Notation</label><br>
         <input type="text" name="place" id="place"><br>
-        <label for="stage">Stage</label><br>
+        <label for="stage">Stage (4–12)</label><br>
         <input type="text" name="stage" id="stage"><br>
         <br>
 
-        <input type="submit" value="Submit!!!" class="form-control">
+        <input type="submit" value="Submit" class="form-control">
       </form>
       <br>
     </div>
