@@ -50,7 +50,7 @@ def methodPlayer(printout):
     add_row(rows[0], False)
     add_row(rows[0], True)
 
-    output = wave.open("output_audio/out.wav", 'wb')
+    output = wave.open("output_audio/%s.wav" % (printout), 'wb')
     output.setparams(data[0][0])
     for sound in data:
         output.writeframes(sound[1])
