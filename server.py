@@ -29,9 +29,10 @@ def accept():
         # audioMaker(formattedString)
         # imageMaker(formattedString)
         print("Building example")
-        example = Example('audio/out.wav', 'images/out.jpg')
 
         formattedString = notationReader(place, stage)
+        example = Example('audio/'+formattedString+'.wav', 'images/'+formattedString+'.jpg')
+
         methodPlayer(formattedString)
         methodDrawer(formattedString)
         return render_template('results.html', example=example, formattedString=formattedString)
