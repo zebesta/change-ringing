@@ -1,25 +1,45 @@
 {% extends "index.html" %}
 {% block content %}
+<script>
+  function methodSelected(place, stage){
+    console.log("You selected someting!");
+    console.log(place);
+    console.log(stage);
+
+
+  }
+  function selectedS(){
+    console.log("You selected someting!");
+    console.log
+    var method = document.getElementById('method');
+    var strMethod = method.options[method.selectedIndex].value;
+    console.log(strMethod);
+    var strings = strMethod.split(' ').reverse();
+    document.getElementById('stage').value = strings[0];
+    document.getElementById('place').value = strings[1];
+
+  }
+</script>
 
 <div class="container" padding-top="10em">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3" id="formcontent">
       <!-- <form class="form-group" enctype="multipart/form-data" action="https://change-ringing.herokuapp.com/accept" method=post> -->
       <form class="form-group" enctype="multipart/form-data" action="http://localhost:5000/accept" method=post>
+        <!-- default song selection if no string typed in -->
+        <label for="layer">Methods</label>
+        <select type="text" class="form-control" name="method" id=method onchange="selectedS()">
+           {% for method in methods %}
+           <option>{{ method.method + method.place + method.stage }}</option>
+           {% endfor %}
+         </select><br>
         <!-- change input from user -->
         <label for="place">Place</label><br>
         <input type="text" name="place" id="place"><br>
         <label for="stage">Stage</label><br>
         <input type="text" name="stage" id="stage"><br>
+        <br>
 
-        <!-- default song selection if no string typed in -->
-        <label for="layer">Songs</label>
-        <select type="text" class="form-control" name="song" id=song>
-           {% for song in songs %}
-           <option>{{ song }}</option>
-           {% endfor %}
-         </select>
-         <br>
         <input type="submit" value="Submit!!!" class="form-control">
       </form>
       <br>

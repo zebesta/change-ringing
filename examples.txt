@@ -1,3 +1,6 @@
+
+
+
 Plain Hunt Minimus
 xh
 4
@@ -17,16 +20,16 @@ Plain Hunt Maximus
 xh
 12
 Plain Bob Doubles
-xhxhx l2
+xhxhx_l2
 5
 Plain Bob Minor
-xhxhxh l2
+xhxhxh_l2
 6
 Plain Bob Triples
-xhxhxhx l2
+xhxhxhx_l2
 7
 Plain Bob Major
-xhxhxhxh l2
+xhxhxhxh_l2
 8
 Grandsire Doubles
 3hxhxhxhxh
@@ -35,19 +38,19 @@ Grandsire Triples
 3hxhxhxhxhxhxh
 7
 Kent Minor
-34x34hx2xhx2xh lh
+34x34hx2xhx2xh_lh
 6
 Kent Major
-34x34hx2xhx2xhx2xh lh
+34x34hx2xhx2xhx2xh_lh
 8
 Oxford Minor
-x34xhx2xhx2xh lh
+x34xhx2xhx2xh_lh
 6
 Double Court Bob Minor
-x4x3xh lh
+x4x3xh_lh
 6
 Double Norwich Bob Major
-x4x36x5xh lh
+x4x36x5xh_lh
 8
 Stedman Doubles
 3hx3h3h3xh3h
@@ -59,5 +62,5 @@ Cambridge Surprise Minor
 x3x4x2x3x4x5l2
 6
 Bristol Surprise Maximus
-x5Tx14.5Tx5T.36.14x7T.58.16x9T.70.18x18.9Tx18x1T lh
+x5Tx14.5Tx5T.36.14x7T.58.16x9T.70.18x18.9Tx18x1T_lh
 12
