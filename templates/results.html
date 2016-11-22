@@ -2,10 +2,9 @@
 
 {% block content %}
 
-<h1>Results!</h1>
+<h1>Results:</h1>
 {% if example %}
   <li class="list-group-item">
-      <h2>Change ringing!</h2>
       <h3>{{formattedString}}</h3>
       <audio controls>
         <source src="{{ example.audio }}" type="audio/wav">
