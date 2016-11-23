@@ -1,6 +1,6 @@
 import os
 import sys
-from flask import Flask, render_template, request, send_from_directory, url_for, redirect, send_file, jsonify
+from flask import Flask, render_template, request, send_from_directory, url_for, redirect, send_file, jsonify, flash
 app = Flask(__name__)
 from example import Example
 from methods import Methods
@@ -34,7 +34,8 @@ def accept():
         stage = str(request.form['stage'])
         if ((len(place) < 1) or (len(stage) < 1)):
             method = str(request.form['method'])
-            return "No string selected, looking at method: " + method
+            flash("Please enter proper place and stage", "danger")
+            return redirect(url_for("home"))
         # formattedString = changeRingingStringChecker(place, stage)
         # audioMaker(formattedString)
         # imageMaker(formattedString)
