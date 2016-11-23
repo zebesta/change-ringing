@@ -1,12 +1,15 @@
 import os
 import sys
 from flask import Flask, render_template, request, send_from_directory, url_for, redirect, send_file, jsonify, flash
-app = Flask(__name__)
 from example import Example
 from methods import Methods
 from notationReader import notationReader
 from methodDrawer import methodDrawer
 from methodPlayer import methodPlayer
+
+# set up flask environment
+app = Flask(__name__)
+app.secret_key = 'dev'
 
 @app.route("/")
 def home():
