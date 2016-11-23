@@ -54,10 +54,6 @@ def accept():
         return "A get request to accept?!?"
 
 
-@app.route("/examples")
-def examples():
-    return render_template('examples.html')
-
 # Retrieves images
 @app.route('/images/<path:path>')
 def send_image(path):

@@ -1,22 +1,21 @@
 {% extends "index.html" %}
 {% block content %}
 <script>
-  function methodSelected(place, stage){
-    console.log("You selected someting!");
-    console.log(place);
-    console.log(stage);
 
-
-  }
-  function selectedS(){
+  function methodSelected(){
     console.log("You selected someting!");
     console.log
     var method = document.getElementById('method');
     var strMethod = method.options[method.selectedIndex].value;
     console.log(strMethod);
     var strings = strMethod.split(' ').reverse();
-    document.getElementById('stage').value = strings[0];
-    document.getElementById('place').value = strings[1];
+    if(strings[0]){
+      document.getElementById('stage').value = strings[0];
+      document.getElementById('place').value = strings[1];
+    }else{
+      document.getElementById('stage').value = '';
+      document.getElementById('place').value = '';
+    }
 
   }
 </script>
@@ -44,7 +43,7 @@
       <!-- <form class="form-group" enctype="multipart/form-data" action="http://0.0.0.0:5000/accept" method=post> -->
         <!-- default song selection if no string typed in -->
         <label for="layer">Methods</label>
-        <select type="text" class="form-control" name="method" id=method onchange="selectedS()">
+        <select type="text" class="form-control" name="method" id=method onchange="methodSelected()">
            {% for method in methods %}
            <option>{{ method.method + method.place + method.stage }}</option>
            {% endfor %}
