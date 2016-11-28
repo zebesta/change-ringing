@@ -120,8 +120,11 @@ def methodPrinter(pNote, stage):
 def notationReader(pNote, stage):
     pNote = pnRegularizer(pNote, stage)
     # print(pNote)
-    methodPrinter(pNote, stage)
-    return "%s_%s" % (pNote, stage)
+    try:
+        methodPrinter(pNote, stage)
+        return "%s_%s" % (pNote, stage)
+    except ValueError:
+        return -1
 
 if __name__ == "__main__":
     print(notationReader(str(sys.argv[1]), str(sys.argv[2])))

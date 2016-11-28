@@ -45,6 +45,9 @@ def accept():
         print("Building example")
 
         formattedString = notationReader(place, stage)
+        if formattedString == -1:
+            flash("Please enter valid place notation and stage", "danger")
+            return redirect(url_for("home"))
         example = Example('audio/'+formattedString+'.wav', 'images/'+formattedString+'.jpg')
 
         methodPlayer(formattedString)
