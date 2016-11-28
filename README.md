@@ -6,3 +6,5 @@ This web app is built using Python 3 with Pillow for image processing, and Flask
 [What is change ringing?]( https://www.youtube.com/watch?v=7Vl-_1F7dFE )
 
 [What is place notation?](http://www.cccbr.org.uk/education/thelearningcurve/pdfs/200404.pdf )
+
+dumb tests
