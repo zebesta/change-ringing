@@ -1,5 +1,3 @@
-# I'm a comment!!!
-
 import sys
 import re
 

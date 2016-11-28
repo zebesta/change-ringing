@@ -59,7 +59,7 @@ Stedman Triples
 3hx3h3h3xh3h
 7
 Cambridge Surprise Minor
-x3x4x2x3x4x5l2
+x3x4x2x3x4x5_l2
 6
 Bristol Surprise Maximus
 x5Tx14.5Tx5T.36.14x7T.58.16x9T.70.18x18.9Tx18x1T_lh
