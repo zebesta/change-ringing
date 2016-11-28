@@ -118,7 +118,10 @@ def methodPrinter(pNote, stage):
 
 
 def notationReader(pNote, stage):
-    pNote = pnRegularizer(pNote, stage)
+    try:
+        pNote = pnRegularizer(pNote, stage)
+    except ValueError:
+        return -1
     # print(pNote)
     try:
         methodPrinter(pNote, stage)
