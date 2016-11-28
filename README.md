@@ -3,5 +3,5 @@ Change ringing is a way to produce music with bells by ringing them in a pattern
 
 This web app is built using Python 3 with Pillow for image processing, and Flask for the web framework.
 
-(What is change ringing?)[https://www.youtube.com/watch?v=7Vl-_1F7dFE]
-(What is place notation?)[http://www.cccbr.org.uk/education/thelearningcurve/pdfs/200404.pdf]
+[What is change ringing?]( https://www.youtube.com/watch?v=7Vl-_1F7dFE )
+[What is place notation?](http://www.cccbr.org.uk/education/thelearningcurve/pdfs/200404.pdf )
