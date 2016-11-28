@@ -1,3 +1,2 @@
-# reg-backend
-# change-ringing
-# change-ringing
+# Change Ringing
+Change ringing is a way to produce music with bells by ringing them in a pattern based sequence. This web application provides the user with a list of methods to select from or, alternatively, allows the user to construct their own method by specifying Place and Stage. This method is then processed in to a uniform notation and an image illustrating the musical pattern in addition to an audio file is constructed and displayed to the user.
